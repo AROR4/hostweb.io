@@ -1,0 +1,171 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Photography Contest</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: yellow;
+            color: crimson;
+        }
+        header {
+            background-color: blue;
+            color: orange;
+            padding: 1rem;
+            text-align: center;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        table {
+            background-color: aqua;
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid seagreen;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: navy;
+        }
+        .image-gallery {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        .category {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .category img {
+            width: 30%;
+            margin-bottom: 10px;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: lightgreen;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        input[type="text"],
+        input[type="email"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid green;
+            border-radius: 5px;
+        }
+        input[type="file"] {
+            margin-bottom: 20px;
+        }
+        input[type="submit"] {
+            background-color: midnightblue;
+            color: peru;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        input[type="submit"]:hover {
+            background-color: plum;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to the National Online Photography Contest 2024</h1>
+    </header>
+    <div class="container">
+        <p>This is the 20th year of the annual photography contest. The winners for each category will be awarded a gold medal.</p>
+        <h2>Contest Categories</h2>
+        <table>
+            <tr>
+                <th>Category Name</th>
+                <th>Description</th>
+                <th>Deadline</th>
+            </tr>
+            <tr>
+                <td>Portrait</td>
+                <td>Submit your best portrait photographs</td>
+                <td>January 26, 2024</td>
+            </tr>
+            <tr>
+                <td>Landscape</td>
+                <td>Capture the beauty of nature and landscapes</td>
+                <td>August 15, 2024</td>
+            </tr>
+            <tr>
+                <td>Macro</td>
+                <td>Explore the world of close-up photography</td>
+                <td>May 1, 2024</td>
+            </tr>
+        </table>
+
+        <h2>Image Showcase</h2>
+        <div class="image-gallery">
+            <div class="category">
+                <h3>Portrait Category</h3>
+                <img src="portrait1.jpeg" alt="Portrait 1">
+                <img src="portrait2.jpeg" alt="Portrait 2">
+                <img src="portrait.jpeg" alt="Portrait 3">
+            </div>
+            <div class="category">
+                <h3>Landscape Category</h3>
+                <img src="landscape1.jpeg" alt="Landscape 1">
+                <img src="landscape2.jpeg" alt="Landscape 2">
+                <img src="landscape3.jpeg" alt="Landscape 3">
+            </div>
+            <div class="category">
+                <h3>Macro Category</h3>
+                <img src="macro1.jpeg" alt="Macro 1">
+                <img src="macro2.jpeg" alt="Macro 2">
+                <img src="macro.jpeg" alt="Macro 3">
+            </div>
+        </div>
+
+        <h2>Registration Form</h2>
+        <form action="submit_form.php" method="post" enctype="multipart/form-data">
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="text" id="phone" name="phone" required>
+
+            <label for="category">Category:</label>
+            <select id="category" name="category">
+                <option value="portrait">Portrait</option>
+                <option value="landscape">Landscape</option>
+                <option value="macro">Macro</option>
+            </select>
+
+            <label for="photo">Upload Photo:</label>
+            <input type="file" id="photo" name="photo" accept="image/*" required>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
